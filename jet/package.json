@@ -1,0 +1,46 @@
+{
+  "name": "@hapnium/jet",
+  "description": "This package is the framework for building web applications in TypeScript.",
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Evaristus Adimonyemma",
+    "email": "evaristusadimonyemma@serchservice.com",
+    "url": "https://iamevaristus.netlify.app"
+  },
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hapnium/typescript.git",
+    "directory": "jet",
+    "defaultBranch": "main",
+    "package": "@hapnium/jet"
+  },
+  "license": "MIT",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build index.ts --outdir dist",
+    "start": "bun index.ts",
+    "start:dev": "bun index.ts --watch",
+    "changelog": "bun src/generator/generateChangelog.ts",
+    "version:patch": "bun src/generator/bumpVersion.js patch",
+    "version:minor": "bun src/generator/bumpVersion.js minor",
+    "version:major": "bun src/generator/bumpVersion.js major"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.7.9",
+    "reflect-metadata": "^0.2.2"
+  }
+}
